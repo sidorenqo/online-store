@@ -31,11 +31,11 @@ function App(props) {
     setCartItems((prev) => [...prev, obj]);
   };
 
-  // const onSaveToFavorite = (obj) => {
-  //   axios
-  //     .post("https://086884bb6051ade8.mokky.dev/cart", obj)
-  //     .then((res) => setCartItems((prev) => [...prev, res.data]));
-  // };
+  const onSaveToFavorite = (obj) => {
+    axios
+      .post("https://086884bb6051ade8.mokky.dev/cart", obj)
+      .then((res) => setCartItems((prev) => [...prev, res.data]));
+  };
 
   const onRemoveItem = (id) => {
     axios.delete(`https://086884bb6051ade8.mokky.dev/cart/${id}`);
